@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
 //import org.testng.annotations.Test;
 
 public class AppTest extends TestCase{
@@ -17,5 +18,8 @@ public class AppTest extends TestCase{
 		WebElement text = driver.findElement(By.xpath("html/body/h2"));
 		//Assert.assertEquals(driver.getTitle(), "Welcome to Orchestrating with Jenkins training!!");
 		System.out.println("Test Passed");
+String title=driver.getTitle();
+  System.out.println("title of page=" + title);
+  Assert.assertEquals(title,"Selenium - Web Browser Automation");
 	}
 }
